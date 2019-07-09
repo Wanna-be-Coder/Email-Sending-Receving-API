@@ -1,0 +1,31 @@
+<% include ./partials/header %>
+
+    <div id="particles-js">
+      <div class ="main">
+            <form action="/upload_doc" method="post">
+        <div class="row">
+        <div class="input-field col s12">
+          <input id="doc_name" type="text" name="name" class="validate">
+          <label for="doc_name">Document Name</label>
+        </div>
+      </div>
+
+     <div class="file-field input-field">
+      <div class="btn blue">
+        <span>File</span>
+        <input type="file" multiple>
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" name="file" placeholder="Upload one or more files">
+      </div>
+    </div>
+    
+  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+            </form>
+      </div>
+    </div>
+
+  
+<% include ./partials/footer %>

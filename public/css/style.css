@@ -36,3 +36,16 @@ body {
 
 }
 
+.mdc-top-app-bar__row {
+    background: black
+}
+
+.demo_app_name {
+    color: inherit;
+}
+
+.demo_app_name :hover{
+    color: white; /* blue colors for links too */
+    text-decoration: none; /* no underline */
+    cursor:pointer; 
+}

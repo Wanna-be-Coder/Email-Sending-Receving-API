@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="css/materialize.min.css" rel="stylesheet">
+        <script src="js/materialize.min.js"></script>
+        <link href="css/style.css" rel="stylesheet">
+
+   
+        
+    </head>
+    <body>
+<header class=" mdc-top-app-bar">
+
+
+  <nav class="black">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#">Contact Us</a></li>
+          <% if(!currentUser){ %>
+        <li><a href="/register">Register</a></li>
+        <li><a href="/login">Login</a></li>
+        <% } else if (currentUser.position==="tier_A") { %>
+          <li><a href="/upload_doc">Upload Doc</a></li>
+          <li><a href="/secret">Secret</a></li>
+          <li><a href="/logout">Logout</a></li>
+
+       <% } else { %>
+          
+         %>
+        <li><a href="/secret">Secret</a></li>
+        <li><a href="/logout">Logout</a></li>
+        <li><a href="#"><%= currentUser.position %></a></li>
+       <% } %>
+      </ul>
+    </div>
+  </nav>
+</header>
